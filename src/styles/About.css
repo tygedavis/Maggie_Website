@@ -1,0 +1,36 @@
+.aboutContainer{
+  width: 100%;
+  max-width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  display: flex;
+}
+
+.imgMaggie{
+  width: 50%;
+}
+.imgMaggie img{
+  width: 50%;
+}
+
+.aboutMe{
+  width: 40%;
+  text-align: left;
+  margin: auto 0 auto 0;
+}
+.aboutMe h4{
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.aboutMe button{
+  cursor: pointer;
+  margin-top: 20px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+.aboutMe button:hover{
+  background-color: black;
+  color: white;
+}

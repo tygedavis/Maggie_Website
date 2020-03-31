@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
+//Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+
+//Components ---
+import Navbar from './components/Navbar';
+
+//Icons
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 function App() {
-  return (
+  const [spinner, setSpinner ] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setSpinner(false), 1000);
+  }, [])
+
+  if(spinner === true){
+    return (
+      <div className='pageLoader'>
+        <CircularProgress /> {/* TODO: Change this to Maggies logo */}
+      </div>
+    )
+  }
+
+  return !spinner && (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Home />
+      <About />
+      <Services />
+      <Contact />
     </div>
   );
 }
