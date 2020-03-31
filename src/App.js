@@ -13,17 +13,20 @@ import Navbar from './components/Navbar';
 //Icons
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+//Images
+import logo from './img/logo.jpg';
+
 function App() {
   const [spinner, setSpinner ] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 1000);
+    setTimeout(() => setSpinner(false), 3000);
   }, [])
 
   if(spinner === true){
     return (
       <div className='pageLoader'>
-        <CircularProgress /> {/* TODO: Change this to Maggies logo */}
+        <img src={logo} alt='Logo' />
       </div>
     )
   }

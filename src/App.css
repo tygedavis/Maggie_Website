@@ -8,6 +8,10 @@ p {
 
 .pageLoader {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  bottom: 46%;
+  left: 42%;
+}
+
+.pageLoader img{
+  width: 30%;
 }
