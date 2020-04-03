@@ -1,11 +1,13 @@
 import React from 'react';
 import '../styles/Navbar.css';
 
+import logo from '../img/logo.jpg';
+
 const Navbar = () => {
   return (
     <div className='navContainer'>
       <div className='logoContainer'>
-        {/* TODO: Get a logo up in here */}
+        <img src={logo} alt='logo'/>
       </div>
       <div className='navLinksContainer'>
         <p className='link'><a href='#homePage'>Home</a></p>

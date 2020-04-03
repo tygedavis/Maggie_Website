@@ -15,7 +15,13 @@ a{
 }
 .logoContainer{
   width: 50%;
+  display: flex;
 }
+.logoContainer img{
+  width: 15%;
+  padding: 10px;
+}
+
 .navLinksContainer{
   display: flex;
   width: 50%;
