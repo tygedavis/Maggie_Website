@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 
 //Components ---
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 //Icons
 
@@ -37,6 +38,7 @@ function App() {
       <About />
       <Services />
       <Contact />
+      <Footer />
     </div>
   );
 }
