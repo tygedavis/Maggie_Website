@@ -11,19 +11,18 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 
 //Icons
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 //Images
 import logo from './img/logo.jpg';
 
 function App() {
-  const [spinner, setSpinner ] = useState(true);
+  const [loader, setLoader ] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 3000);
+    setTimeout(() => setLoader(false), 2500);
   }, [])
 
-  if(spinner === true){
+  if(loader === true){
     return (
       <div className='pageLoader'>
         <img src={logo} alt='Logo' />
@@ -31,7 +30,7 @@ function App() {
     )
   }
 
-  return !spinner && (
+  return !loader && (
     <div className="App">
       <Navbar />
       <Home />
